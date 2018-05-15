@@ -1,3 +1,15 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
+        classpath 'org.jfrog.buildinfo:build-info-extractor-gradle:3.1.1'
+    }
+}
+
 apply plugin: 'groovy'
 //添加maven plugin, 用于发布我们的jar
 apply plugin: 'maven'
@@ -13,16 +25,5 @@ repositories {
     mavenCentral()
 }
 
-//设置maven deployer
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            //设置插件的GAV参数
-            pom.groupId = 'com.askzhao.plugin'
-            pom.artifactId = 'dp-plugin'
-            pom.version = 1.0
-            //文件发布到下面目录
-            repository(url: uri('../release'))
-        }
-    }
-}
+
+

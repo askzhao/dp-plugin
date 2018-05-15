@@ -17,7 +17,7 @@ public class DpPlugin implements Plugin<Project> {
 
         project.dependencies {
             compile 'org.aspectj:aspectjrt:1.8.10'
-            compile project(':runtime')//'com.sensorsdata.analytics.android:SensorsAnalyticsSDK-Runtime:1.0.2'
+            compile project('com.github.askzhao:dp-runtime:1.0.0')
         }
 
 //        project.extensions.create("askDataPoint", AskDataPointExtension)
@@ -49,24 +49,24 @@ public class DpPlugin implements Plugin<Project> {
                 println("####################################################################")
                 println()
 
-//                for (IMessage message : handler.getMessages(null, true)) {
-//                    switch (message.getKind()) {
-//                        case IMessage.ABORT:
-//                        case IMessage.ERROR:
-//                        case IMessage.FAIL:
-//                            log.error message.message, message.thrown
-//                            break;
-//                        case IMessage.WARNING:
-//                            log.warn message.message, message.thrown
-//                            break;
-//                        case IMessage.INFO:
-//                            log.info message.message, message.thrown
-//                            break;
-//                        case IMessage.DEBUG:
-//                            log.debug message.message, message.thrown
-//                            break;
-//                    }
-//                }
+                for (IMessage message : handler.getMessages(null, true)) {
+                    switch (message.getKind()) {
+                        case IMessage.ABORT:
+                        case IMessage.ERROR:
+                        case IMessage.FAIL:
+                            log.error message.message, message.thrown
+                            break;
+                        case IMessage.WARNING:
+                            log.warn message.message, message.thrown
+                            break;
+                        case IMessage.INFO:
+                            log.info message.message, message.thrown
+                            break;
+                        case IMessage.DEBUG:
+                            log.debug message.message, message.thrown
+                            break;
+                    }
+                }
             }
         }
 
