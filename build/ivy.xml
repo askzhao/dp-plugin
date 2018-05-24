@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ivy-module version="2.0" xmlns:m="http://ant.apache.org/ivy/maven">
-  <info organisation="" module="dp-plugin" revision="unspecified" status="integration" default="true" publication="20180509191117"/>
+  <info organisation="" module="dp-plugin" revision="unspecified" status="integration" default="true" publication="20180523182032"/>
   <configurations>
     <conf name="apiElements" visibility="private" extends="runtime"/>
     <conf name="archives" visibility="public"/>
