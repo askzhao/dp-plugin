@@ -26,4 +26,72 @@ repositories {
 }
 
 
+//设置maven deployer
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            //设置插件的GAV参数
+            pom.groupId = 'com.github.askzhao'
+            pom.artifactId = 'dp-plugin'
+            pom.version = '1.0.0'
+            //文件发布到下面目录
+            repository(url: 'http://inside.finupgroup.com/nexus/content/groups/public/')
+        }
+
+//        mavenDeployer {
+//            repository(url: "$nexusRepositoryUrl") {
+//                authentication(userName: nexusUserName, password: nexusPassword)
+//            }
+//
+//            pom.project {
+//                name LIB_ARTIFACT
+//                groupId LIB_GROUP
+//                artifactId LIB_ARTIFACT
+//                version version
+//                packaging 'jar'
+//                description LIB_DES
+//                licenses {
+//                    license {
+//                        name LICENCE_NAME
+//                        url LICENCE_URL
+//                        distribution LICENCE_DIST
+//                    }
+//                }
+//                developers {
+//                    developer {
+//                        id DEVELOPER_ID
+//                        name DEVELOPER_NAME
+//                        email DEVELOPER_EMAIL
+//                    }
+//                }
+//
+//                organization {
+//                    name ORGANIZATION_NAME
+//                    url ORGANIZATION_URL
+//                }
+//            }
+//        }
+    }
+}
+
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            repository(url: "http://inside.finupgroup.com/nexus/content/groups/public/") {
+////                authentication(userName: nexusUserName, password: nexusPassword)
+//            }
+//            pom.project {
+//                name "dp-plugin"
+//                groupId 'com.github.askzhao'
+//                artifactId 'dp-plugin'
+//                version '1.0.0'
+//                packaging 'jar'
+//                description "埋点插件"
+//
+//            }
+//        }
+//    }
+//}
+
+
 
