@@ -20,7 +20,7 @@ public class DpPlugin implements Plugin<Project> {
             compile 'com.github.askzhao:dp-runtime:1.0.3'
         }
 
-//        project.extensions.create("askDataPoint", AskDataPointExtension)
+        project.extensions.create("askDataPoint", AskDataPointExtension)
 
         project.android.applicationVariants.all { variant ->
             JavaCompile javaCompile = variant.javaCompile
