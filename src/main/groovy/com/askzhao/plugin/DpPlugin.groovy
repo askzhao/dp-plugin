@@ -17,7 +17,7 @@ public class DpPlugin implements Plugin<Project> {
 
         project.dependencies {
             compile 'org.aspectj:aspectjrt:1.8.10'
-            compile 'com.github.askzhao:dp-runtime:1.0.3'
+            compile 'com.github.askzhao:dp-runtime:1.0.4'
         }
 
         project.extensions.create("askDataPoint", AskDataPointExtension)
